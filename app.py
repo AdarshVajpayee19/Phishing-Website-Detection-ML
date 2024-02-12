@@ -14,20 +14,19 @@ st.write('This ML-based app is developed for educational purposes. Objective of 
 
 with st.expander("PROJECT DETAILS"):
     st.subheader('Approach')
-    st.write('I used _supervised learning_ to classify phishing and legitimate websites. '
-             'I benefit from content-based approach and focus on html of the websites. '
-             'Also, I used scikit-learn for the ML models.'
+    st.write('We used _supervised learning_ to classify phishing and legitimate websites. '
+             'We benefit from content-based approach and focus on html of the websites. '
+             'Also, We used scikit-learn for the ML models.'
              )
     st.write('For this educational project, '
-             'I created my own data set and defined features, some from the literature and some based on manual analysis. '
-             'I used requests library to collect data, BeautifulSoup module to parse and extract features. ')
+             'We created my own data set and defined features, some from the literature and some based on manual analysis. '
+             'We used requests library to collect data, BeautifulSoup module to parse and extract features. ')
     st.write('The source code and data sets are available in the below Github link:')
-    st.write('_https://github.com/emre-kocyigit/phishing-website-detection-content-based_')
+    st.write('_https://github.com/AdarshVajpayee19/Phishing-Website-Detection-ML_')
 
     st.subheader('Data set')
-    st.write('I used _"phishtank.org"_ & _"tranco-list.eu"_ as data sources.')
+    st.write('We used _"phishtank.org"_ & _"tranco-list.eu"_ as data sources.')
     st.write('Totally 26584 websites ==> **_16060_ legitimate** websites | **_10524_ phishing** websites')
-    st.write('Data set was created in October 2022.')
 
     # ----- FOR THE PIE CHART ----- #
     labels = 'phishing', 'legitimate'
@@ -62,11 +61,11 @@ with st.expander("PROJECT DETAILS"):
     )
 
     st.subheader('Features')
-    st.write('I used only content-based features. I didn\'t use url-based faetures like length of url etc.'
+    st.write('We used only content-based features. I didn\'t use url-based faetures like length of url etc.'
              'Most of the features extracted using find_all() method of BeautifulSoup module after parsing html.')
 
     st.subheader('Results')
-    st.write('I used 7 different ML classifiers of scikit-learn and tested them implementing k-fold cross validation.'
+    st.write('We used 7 different ML classifiers of scikit-learn and tested them implementing k-fold cross validation.'
              'Firstly obtained their confusion matrices, then calculated their accuracy, precision and recall scores.'
              'Comparison table is below:')
     st.table(ml.df_results)
